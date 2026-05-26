@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_service_request_config_settings" model="ir.actions.act_window">
+        <field name="name">Service Request Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'service_request'}</field>
+    </record>
+
+    <record id="res_config_settings_view_form_inherit_service_request"
+            model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.service.request</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='general_settings']" position="after">
+                <app string="Service Request" name="service_request">
+                    <block title="Service Request Settings">
+                        <setting string="Approval Cost Limit" help="Requests above this amount can only be approved by managers.">
+                            <field name="approval_cost_limit"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

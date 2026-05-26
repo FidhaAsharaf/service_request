@@ -1,0 +1,12 @@
+<odoo>
+    <record id="ir_cron_service_request_reminder" model="ir.cron">
+        <field name="name">Service Request Approval Reminderr</field>
+        <field name="model_id" ref="service_request_management.model_service_request"/>
+        <field name="state">code</field>
+        <field name="code">model.action_pending_approval_reminder()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active">True</field>
+    </record>
+
+</odoo>

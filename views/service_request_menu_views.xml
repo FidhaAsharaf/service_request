@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_service_request_root" name="Service Request" sequence="1"/>
+
+    <menuitem id="menu_service_request" name="Requests" parent="menu_service_request_root"
+              action="action_service_request" sequence="2"/>
+    <menuitem id="menu_service_request_settings" name="Settings" parent="menu_service_request_root"
+              action="action_service_request_config_settings" sequence="3"/>
+
+</odoo>

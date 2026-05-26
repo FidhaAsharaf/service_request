@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="email_template_service_request_reminder" model="mail.template">
+        <field name="name">Service Request Pending Approval Reminder</field>
+        <field name="model_id" ref="service_request_management.model_service_request"/>
+        <field name="subject">Pending Approval Reminder - {{ object.reference }}</field>
+        <field name="body_html"><![CDATA[
+            <p>Hello Manager,</p>
+            <p>The following service request has been pending approval
+                    for more than 3 days.</p>
+            <p>Please review the request.</p>
+        ]]></field>
+    </record>
+</odoo>

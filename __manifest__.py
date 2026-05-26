@@ -3,6 +3,7 @@
     'name': "Service Request",
     'version': "18.0.1.1",
     'License': "LGPL-3",
+    'author' : "Fidha",
     'depends': ['base', 'mail','project'],
     'data': [
         'security/groups.xml',

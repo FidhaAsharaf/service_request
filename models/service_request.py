@@ -68,7 +68,7 @@ class ServiceRequest(models.Model):
             )
             ):
                 raise ValidationError(
-                    _("Managers can approve only high-cost requests.")
+                    _("Approval above limit 5000 is restricted to managers.")
                 )
 
             rec.state = 'approved'

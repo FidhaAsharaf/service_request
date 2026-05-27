@@ -7,7 +7,7 @@ class ResConfigSettings(models.TransientModel):
     approval_cost_limit = fields.Integer(
         string="Approval Cost Limit",
         config_parameter='service_request_management.approval_cost_limit',
-        help="Requests above this amount can only be approved by managers."
+        help="Requests above this given cost limit can only be approved by managers."
     )
 
 
